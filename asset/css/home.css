@@ -771,7 +771,7 @@ textarea.form-control {
     height: 150px; /* Ukuran gambar, pastikan sama dengan width untuk bentuk bulat */
     border-radius: 50%; /* Membuat gambar menjadi bulat */
     border: 5px solid white; /* Garis putih di sekitar gambar */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Bayangan dengan offset 4px ke bawah, blur 10px, dan transparansi */
     object-fit: cover; /* Mengatur gambar agar tidak terdistorsi dan menutupi area bulat */
     animation: moveUpDown 1s infinite ease-in-out;
