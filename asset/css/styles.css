@@ -1,0 +1,527 @@
+    /* Reset beberapa gaya dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --txt-primary: rgb(255, 222, 32);
+        --txt-secondary: rgb(48, 121, 179);
+        --txt-third: #007c4d;
+    }
+    
+
+    @font-face {
+        font-family: 'Sigmar';
+        src: url('/asset/font/Sigmar/Sigmar.ttf') format('truetype'),
+             url('/asset/font/Sigmar/Sigmar.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Sour Gummy';
+        src: url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+             url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #7a181c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+/* Kontainer utama */
+.container {
+    position: relative;
+    background-image: url("/asset/img/background.jpg");
+    background-size: cover;
+    background-position: center; /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Animasi untuk gambar 1 */
+    .image-1 {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 3s forwards;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+        }
+    }
+
+    /* Animasi untuk gambar 2 */
+    .image-2 {
+        position: absolute;
+        top: -100%; /* Mulai dari luar frame, di atas */
+        left: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInLeftUp 4s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInLeftUp {
+        0% {
+          top: -100%; /* Posisi luar atas */
+          left: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          top: 0; /* Gambar masuk ke dalam frame */
+          left: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 3 */
+    .image-3 {
+        position: absolute;
+        top: -100%; /* Mulai dari luar frame, di atas */
+        right: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInRightUp 4s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInRightUp {
+        0% {
+          top: -100%; /* Posisi luar atas */
+          right: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          top: 0; /* Gambar masuk ke dalam frame */
+          right: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 7 */
+    .image-7 {
+        position: absolute;
+        bottom: -100%; /* Mulai dari luar frame, di atas */
+        left: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInLeftBottom 4s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInLeftBottom {
+        0% {
+          bottom: -100%; /* Posisi luar atas */
+          left: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          bottom: 0; /* Gambar masuk ke dalam frame */
+          left: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 8 */
+    .image-8 {
+        position: absolute;
+        bottom: -100%; /* Mulai dari luar frame, di atas */
+        right: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInRightBottom 4s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInRightBottom {
+        0% {
+          bottom: -100%; /* Posisi luar atas */
+          right: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          bottom: 0; /* Gambar masuk ke dalam frame */
+          right: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 9 */
+    .image-9 {
+        position: absolute;
+        width: 100%;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 3s forwards;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 0px;
+        }
+    }
+
+
+    /* Teks */
+
+    .index{
+        position: absolute;
+        z-index: 999;
+        text-align: center;
+        top:15%;
+    }
+
+    .index p {
+        font-size: 12vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Bebas Neue Bold';
+        color: var(--txt-primary);
+        line-height: 0.8;
+        animation: moveUpDown 1s infinite ease-in-out; /* Menambahkan animasi */    }
+    
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0); /* Posisi awal teks di atas */
+            }
+            50% {
+                transform: translateY(20px); /* Teks bergerak ke bawah */
+            }
+            100% {
+                transform: translateY(0); /* Kembali ke posisi awal */
+            }
+        }
+
+
+    .index h1 {
+        font-size: 15vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--txt-primary);    
+        animation: zoomIn 5s forwards; /* Menambahkan animasi zoom in */
+    }
+    
+    /* Animasi zoom-in */
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0); /* Teks mulai kecil dan transparan */
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1); /* Teks kembali ke ukuran normal dan terlihat */
+        }
+    }
+
+    .index h3 {
+        font-size: 8vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: normal;
+        color: whitesmoke;
+        animation: zoomIn 5s forwards; /* Menambahkan animasi zoom in */
+    }
+
+    .index h5 {
+        font-size: 4vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: normal;
+        margin-top: 50px;
+        color: whitesmoke;
+        animation: zoomIn 5s forwards; /* Menambahkan animasi zoom in */
+    }
+
+    .tombolcover {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+
+    .tombolbuka{
+        background-color: var(--txt-primary);
+        font-size: 4vw;  /* Ukuran font tetap proporsional */
+        font-family: sans-serif;
+        font-weight: normal;
+        color: rgb(20, 20, 20);
+        padding: 5px 40px 5px 40px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    #recipient-name{
+        font-size: 6vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bolder;
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    #spinner-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke; /* Langit biru dan putih */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+    
+    .spinner {
+        display: flex;
+        flex-direction: column; /* Mengatur agar elemen-elemen disusun secara vertikal */
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Agar teks juga rata tengah */
+    }
+    
+    .spinner-gif {
+        width: 120px; /* Ukuran gambar spinner */
+        height: auto; /* Menjaga rasio gambar */
+    }
+    
+    #spinner-text {
+        margin-top: 10px; /* Jarak antara gambar dan teks */
+        font-size: 16px;
+        font-weight: 500;
+        color: #000; /* Warna teks hitam */
+    }
+    
+    @media screen and (max-width: 320px) and (min-height: 480px)  {
+        .container{
+            width: 320px;
+        }
+        
+        .image-2 {
+            width: 30vw;
+            z-index: 2;
+        }
+        .image-3 {
+            width: 35vw;
+            z-index: 2;
+        }
+        
+        .image-4 {
+            width: 68vw;
+        }
+        
+        .image-5 {
+            width: 20vw;
+        }
+        
+        .image-6 {
+            width: 15vw;
+        }
+        
+        .image-7 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-left: 4vw;
+        }
+        .image-8 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-right: 1vw;
+        }
+
+        .index h1 {
+            font-size: 12vw;  /* Ukuran font tetap proporsional */
+        }
+
+        .index p {
+            font-size: 12vw;  /* Ukuran font tetap proporsional */
+        }
+
+        .index h3 {
+            font-size: 7vw;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+            font-weight: bold;
+        }
+    
+        #recipient-name{
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+    @media screen and (min-width: 768px)  {
+        .container{
+            width: 768px;
+        }
+
+        .index h1 {
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index p {
+            font-size: 100px;  /* Ukuran font tetap proporsional */
+        }
+
+        .index h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+    @media screen and (min-width: 820px)  {
+        .container{
+            width: 768px;
+        }
+
+        .index h1 {
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index p {
+            font-size: 100px;  /* Ukuran font tetap proporsional */
+        }
+
+        .index h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+
+    @media screen and (min-width: 1024px) and (max-height: 800px)  {
+        .container{
+            max-width: 400px;
+        }
+        .index{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .index h1 {
+
+            font-size: 60px;  
+        }
+
+        .index p {
+            font-size: 60px;  /* Ukuran font tetap proporsional */
+        }
+    
+        .index h3 {
+            font-size: 25px;  
+            margin-bottom: 5px;
+
+        }
+    
+        .index h5 {
+            font-size: 15px;  
+        }
+       
+        .tombolbuka{
+            font-size: 15px; 
+        }
+    
+        #recipient-name{
+            font-size: 20px;  
+        }
+    }
+
+
+    @media screen and (min-width: 1280px) and (min-height: 720px)  {
+        .container{
+            max-width: 500px;
+        }
+        .index{
+            margin-top: 10px;
+        }
+        .index h1 {
+
+            font-size: 70px;  
+        }
+
+        .index p {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+        }
+    
+        .index h3 {
+            font-size: 30px;  
+            margin-bottom: 5px;
+
+        }
+    
+        .index h5 {
+            font-size: 20px;  
+        }
+       
+        .tombolbuka{
+            font-size: 20px; 
+        }
+    
+        #recipient-name{
+            font-size: 28px;  
+        }
+    }
+

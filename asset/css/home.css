@@ -1,0 +1,955 @@
+/* Reset beberapa gaya dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-primary: rgb(255, 222, 32);
+    --txt-secondary: rgb(48, 121, 179);
+    --txt-third: #007c4d;
+}
+    
+@font-face {
+    font-family: 'Sigmar';
+    src: url('/asset/font/Sigmar/Sigmar.ttf') format('truetype'),
+         url('/asset/font/Sigmar/Sigmar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sour Gummy';
+    src: url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+         url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    background-color: #7a181c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Kontainer utama */
+.container {
+    position: relative;
+    background-image: url("/asset/img/background.jpg");
+    background-size: cover;
+    background-position: center; /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Animasi untuk gambar 1 */
+    .image-1 {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 1s forwards;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+        }
+    }
+
+    /* Animasi untuk gambar 2 */
+    .image-2 {
+        position: absolute;
+        top: -100%; /* Mulai dari luar frame, di atas */
+        left: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInLeftUp 2s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInLeftUp {
+        0% {
+          top: -100%; /* Posisi luar atas */
+          left: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          top: 0; /* Gambar masuk ke dalam frame */
+          left: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 3 */
+    .image-3 {
+        position: absolute;
+        top: -100%; /* Mulai dari luar frame, di atas */
+        right: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        opacity: 0;
+        animation: slideInRightUp 2s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInRightUp {
+        0% {
+          top: -100%; /* Posisi luar atas */
+          right: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          top: 0; /* Gambar masuk ke dalam frame */
+          right: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 7 */
+    .image-7 {
+        position: absolute;
+        bottom: -100%; /* Mulai dari luar frame, di atas */
+        left: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        margin-bottom: 80px;
+        opacity: 0;
+        animation: slideInLeftBottom 2s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInLeftBottom {
+        0% {
+          bottom: -100%; /* Posisi luar atas */
+          left: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          bottom: 0; /* Gambar masuk ke dalam frame */
+          left: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 8 */
+    .image-8 {
+        position: absolute;
+        bottom: -100%; /* Mulai dari luar frame, di atas */
+        right: -100%; /* Mulai dari luar frame, di kiri */
+        width: 50%;
+        height: auto;
+        margin-bottom: 80px;
+        opacity: 0;
+        animation: slideInRightBottom 2s forwards; /* Animasi */
+      }
+      
+      /* Animasi untuk gambar */
+      @keyframes slideInRightBottom {
+        0% {
+          bottom: -100%; /* Posisi luar atas */
+          right: -100%; /* Posisi luar kiri */
+          opacity: 0; /* Opasitas mulai 0 */
+        }
+        100% {
+          bottom: 0; /* Gambar masuk ke dalam frame */
+          right: 0; /* Gambar masuk ke dalam frame */
+          opacity: 1; /* Opasitas menjadi 100% */
+        }
+      }
+
+    /* Animasi untuk gambar 9 */
+    .image-9 {
+        position: absolute;
+        width: 100%;
+        bottom: -50%;
+        left: 50%;
+        margin-bottom: 80px;
+        transform: translateX(-50%);
+        animation: slideUp 1s forwards;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 0px;
+        }
+    }
+
+/* Teks */
+
+/* TEXT UNTUK MENU 1 */
+/* Teks utama */
+.texthome {
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    justify-content: center;
+    width: 95%;  /* Mengatur lebar penuh */
+    top:15%;
+}
+
+.texthome p {
+    font-size: 12vw;
+    font-family: 'Bebas Neue Bold';
+    color: var(--txt-primary);
+    line-height: 0.8;
+    animation: moveUpDown 1s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.texthome h1 {
+    font-size: 15vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--txt-primary);    
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+/* Animasi zoom-in */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0); /* Teks mulai kecil dan transparan */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Teks kembali ke ukuran normal dan terlihat */
+    }
+}
+
+.texthome h3 {
+    font-size: 8vw;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    color: whitesmoke;
+    animation: zoomIn 2s forwards; /* Menambahkan animasi zoom in */
+
+}
+
+.texthome h5 {
+    font-size: 4vw;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    margin-top: 50px;
+    color: whitesmoke;
+}
+
+/* TEXT UNTUK MENU 2 */
+.texthome2 {
+    position: relative;
+    margin-top: 30%;
+    font-weight: normal;
+    text-align: center;
+    justify-content: center;
+    z-index: 999;
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+.texthome2 h1 {
+    font-size: 100px;
+    font-family: 'Bebas Neue Bold';
+    text-align: center;
+    color: whitesmoke;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.texthome2 h2 {
+    font-size: 35px;
+    font-family: 'Bebas Neue Bold';
+    color: var(--txt-primary);
+    text-align: center;
+    animation: moveAtasBawah 2s forwards; /* Menambahkan animasi */
+}
+
+/* Animasi teks bergerak dari atas ke bawah dan mengubah opacity */
+@keyframes moveAtasBawah {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Teks mulai di atas dan tidak terlihat */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Teks bergerak ke posisi semula dan terlihat */
+    }
+}
+
+@keyframes moveBawahAtas {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Teks mulai di atas dan tidak terlihat */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Teks bergerak ke posisi semula dan terlihat */
+    }
+}
+
+
+.texthome2 h3 {
+    font-size: 25px;
+    font-family: 'Bebas Neue Bold';
+    color: whitesmoke;
+    text-align: center;
+    animation: moveBawahAtas 2s forwards; /* Menambahkan animasi */
+
+}
+
+.texthome2 h4 {
+    font-size: 30px;
+    font-family: 'Bebas Neue Bold';
+    color: whitesmoke;
+    text-align: center;
+    margin-top: -25%;
+}
+
+.texthome2 h5 {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Bebas Neue';
+    color: whitesmoke;
+    text-align: center;
+}
+
+#recipient-name {
+    font-size: 6vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+.date-container {
+    display: flex;
+    position: static;
+    justify-content: center;
+    text-align: center;
+    color: var(--txt-primary); /* Warna oranye */
+    font-family: 'Bebas Neue';
+    animation: moveBawahAtas 2s forwards; /* Menambahkan animasi */
+}
+
+.date-number {
+    font-size: 70px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.date-details {
+    text-align: left;
+    margin-right: 10px; /* Spasi sebelum separator */
+}
+
+.day {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.month-year {
+    font-size: 30px;
+}
+      
+.separator {
+    width: 3px;
+    height: 80px; /* Tinggi garis pembatas */
+    background-color: var(--txt-primary); /* Warna oranye */
+    margin: 0 10px; /* Spasi di kiri dan kanan separator */
+}
+      
+.time {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+      
+.selesai {
+    font-size: 30px;
+}
+
+
+/* CountDown */
+#countdown {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: -2%;
+    z-index: 10;
+    animation: moveAtasBawah 2s forwards; /* Menambahkan animasi */
+}
+
+.time-box {
+    text-align: center;
+    padding: 5px;
+    background-color: #fabd15;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70px;
+}
+
+.time-value {
+    font-family: 'Orbitron';
+    font-weight: Bolder;
+    font-size: 25px;
+    color: #141414;
+    margin-bottom: -10px;
+}
+
+.time-label {
+    font-size: 15px;
+    color: #141414;
+}
+
+/* TEXT UNTUK MENU 3 */
+.menu3 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+}
+
+.menu3 h1 {
+    font-size: 40px;  /* Ukuran font tetap proporsional */
+    font-family: 'Bebas Neue';
+    font-weight: bolder;
+    color: var(--txt-primary);
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+.menu3 h5 {
+    font-size: 6vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+/* Menambahkan style untuk iframe dengan kelas 'map-iframe' */
+.menu3-map {
+    border: 5px solid whitesmoke;  /* Menambahkan border berwarna tomato */
+    border-radius: 10px;        /* Memberikan sudut border yang melengkung */
+    width: 90%;                /* Mengatur lebar iframe agar 100% dari kontainer */
+    height: 30vh;                /* Mengatur tinggi iframe menjadi 80% dari kontainer */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Memberikan bayangan */
+    pointer-events: none;       /* Menonaktifkan interaksi dengan */
+}
+
+.tombolcover {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.tombolbuka {
+    background-color: var(--txt-primary);
+    font-size: 4vw;  /* Ukuran font tetap proporsional */
+    font-family: sans-serif;
+    font-weight: normal;
+    color: rgb(20, 20, 20);
+    padding: 5px 40px 5px 40px;
+    border-radius: 25px;
+    border: none;
+}
+    
+    /* MENU 4 */
+    /* AWAL STYLE UNTUK FORM DOA DAN UCAPAN */
+/* Menu 4 */
+.menu4 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+}
+
+.menu4 h1 {
+    font-size: 40px;  /* Ukuran font tetap proporsional */
+    font-family: 'Bebas Neue';
+    font-weight: bolder;
+    margin-bottom: -20px;
+    color: var(--txt-primary);
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+.menu4 h5 {
+    font-size: 6vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: zoomIn 1s forwards; /* Menambahkan animasi zoom in */
+}
+
+.ucapan-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;  /* Menyembunyikan scrollbar namun tetap bisa scroll */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px 20px;
+    padding: 20px;
+    font-family: sans-serif;    
+    scrollbar-width: thin; /* Hanya menampilkan scrollbar tipis (untuk Firefox) */
+    scrollbar-color: transparent transparent; /* Menyembunyikan scrollbar (untuk Firefox) */
+}
+
+.ucapan-container::-webkit-scrollbar {
+    width: 0px; /* Menyembunyikan scrollbar untuk Webkit browser (Chrome, Safari, Edge) */
+}
+
+.ucapan-container::-webkit-scrollbar-thumb {
+    background: transparent; /* Menyembunyikan scrollbar thumb */
+}
+
+.ucapan-container::-webkit-scrollbar-track {
+    background: transparent; /* Menyembunyikan track scrollbar */
+}
+
+.ucapan-item {
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.ucapan-item strong {
+    color: rgb(39, 101, 196);
+}
+
+/* Popup container */
+.form-popup {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    width: 90%;
+    max-width: 500px;
+    transition: opacity 0.3s ease-in-out;
+    font-family: 'Sour Gummy';
+}
+
+/* Close button */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-close:hover {
+    color: #d9534f;
+}
+
+/* Title */
+.form-title {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input and Select Fields */
+.form-control, .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea */
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Add some spacing to the fields */
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+
+.alert-box {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    min-width: 200px;
+    z-index: 99999;
+}
+
+.btn-buat-ucapan {
+    background-color: var(--txt-secondary);
+    color: whitesmoke;
+}
+
+.btn-buat-ucapan:hover {
+    background-color: #006666;
+}
+
+#spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke; /* Langit biru dan putih */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column; /* Mengatur agar elemen-elemen disusun secara vertikal */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Agar teks juga rata tengah */
+}
+
+.spinner-gif {
+    width: 120px; /* Ukuran gambar spinner */
+    height: auto; /* Menjaga rasio gambar */
+}
+
+#spinner-text {
+    margin-top: 10px; /* Jarak antara gambar dan teks */
+    font-size: 16px;
+    font-weight: 500;
+    color: #000; /* Warna teks hitam */
+}
+
+
+#btnClosePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+#btnClosePopup:hover {
+    color: #007bff;
+}
+
+/* Akhir Style untuk Form Doa dan Ucapan */
+
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #0f0f0f;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  .gift-card-logo {
+    align-self: flex-start;
+    padding-bottom: 20px;
+  }
+
+
+    /* MENU 6 */
+    /* AWAL STYLE UNTUK FORM DOA DAN UCAPAN */
+/* Menu 6 */
+.menu6 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 30vh;
+    font-family: "Orbitron";
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 20px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+  /*STYLE FOTO*/
+  /* Styling untuk gambar berbentuk bulat */
+  .rounded-photo {
+    width: 150px; /* Ukuran gambar, sesuaikan sesuai kebutuhan */
+    height: 150px; /* Ukuran gambar, pastikan sama dengan width untuk bentuk bulat */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 5px solid white; /* Garis putih di sekitar gambar */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Bayangan dengan offset 4px ke bawah, blur 10px, dan transparansi */
+    object-fit: cover; /* Mengatur gambar agar tidak terdistorsi dan menutupi area bulat */
+    animation: moveUpDown 1s infinite ease-in-out;
+}
+
+/* Posisi tombol audio kontrol secara default (desktop) */
+.audio-controls {
+    display: flex;        
+    position: absolute;
+    bottom: 95px;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 9990;  /* Pastikan tombol muncul di atas elemen lain */
+}
+
+/* Styling tombol audio */
+.audio-controls button {
+    background-color: rgba(0, 0, 0, 0);
+    color: whitesmoke;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.audio-controls button:hover {
+    color: #005493;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #005493;
+    border-radius: 10px 10px 0 0;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    filter: invert(1) grayscale(1) contrast(100%);
+    margin: 10px;
+}
+
+.button-container button {
+    background-color: #005493;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    padding: 10px;
+}
+
+.button-container button:hover {
+    background-color: #be292e;
+    transform: scale(1.1);
+}
+
+.button-container button:active {
+    background-color: #be292e;
+    transform: scale(0.95);
+    outline: none;
+}
+
+/* Menambahkan gaya untuk tombol yang aktif setelah diklik */
+.button-container button.active {
+    background-color: #be292e; /* Warna tetap saat tombol diklik */
+    transform: scale(0.95);
+}
+
+
+
+    @media screen and (min-width: 800px){
+        .container{
+            max-width: 500px;
+        }
+
+        .button-container{
+            max-width: 500px;
+        }
+
+        .texthome p {
+            font-size: 60px;
+        }
+
+        .texthome h1 {
+            font-size: 60px;  
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+    
+        .texthome h3 {
+            font-size: 40px;  
+        }
+    
+        .texthome h5 {
+            font-size: 25px;
+        }
+    
+        #recipient-name{
+            font-size: 30px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .texthome2 {
+            margin-top: 40%;
+        }
+
+        .texthome2 h1 {
+            font-size: 100px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h2 {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+            margin-top: -60px;
+        }
+
+        .texthome2 h3 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h4 {
+            font-size: 25px;  /* Ukuran font tetap proporsional */
+            margin-top: -200px;
+        }
+
+        .texthome2 h5 {
+            font-size: 22px;  /* Ukuran font tetap proporsional */
+        }   
+        
+        /*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+        .date-number {
+            font-size: 75px;
+            margin-right: 10px;
+            margin-top: -25px;
+          }
+          
+          .day, .time  {
+            font-size: 25px;
+            margin-bottom: -10px;
+          }
+          
+          .month-year, .selesai {
+            font-size: 25px;
+          }
+        
+            .time-value {
+                font-size: 30px;
+        }
+        
+            .time-label {
+                font-size: 10px;
+        }
+
+        .menu3 h1 {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+        }
+    
+        .menu3 h5 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka {
+            font-size: 20px;  /* Ukuran font tetap proporsional */
+            color: rgb(17, 17, 17);
+            padding: 10px 30px 10px 30px;
+        }
+        
+        .menu4 h1 {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+        }
+        
+        .menu4 h5 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+        }
+
+        .ucapan-container {
+            max-height: 400px;
+        }
+        
+    }

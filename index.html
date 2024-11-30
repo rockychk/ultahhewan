@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Gambar</title>
+    
+    <!-- Menambahkan Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Titan+One|Sour Gummy|Sigmar|Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/styles.css">
+</head>
+<body>
+
+    <!-- Spinner Overlay -->
+    <div id="spinner-overlay">
+        <div class="spinner">
+            <img src="https://media.tenor.com/ik-bVGNIAXEAAAAj/spiderman-spider-man.gif" alt="Loading..." class="spinner-gif">
+            <span id="spinner-text">Halaman sedang dimuat...</span>
+        </div>
+    </div>
+    
+
+    <div class="container" id="content" >
+        <img src="asset/img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="asset/img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="asset/img/tr.webp" alt="Gambar 3" class="image-3">
+    
+        <div class="index">
+            <p>HAPPY</p>
+            <P style="color: whitesmoke;">BIRTHDAY</P>
+            <h3 style="margin-top: 80px;">YUK DATANG DI ACARA</h3>
+            <h1 id="name"></h1>
+            <h3 id="age"></h3>
+            <h5>mengundang</h5>
+
+            <div class="tombolcover">
+                <h2 id="recipient-name"></h2>
+                <button class="tombolbuka" onclick="bukaUndangan()">Buka Undangan</button>
+            </div>
+
+        </div>
+        
+
+        <img src="asset/img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="asset/img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="asset/img/br.webp" alt="Gambar 8" class="image-8">
+    </div>
+
+    
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+            // Mulai proses pengambilan data
+            fetchDataFromSpreadsheet();
+        });
+
+        function fetchDataFromSpreadsheet() {
+            const spinnerText = document.getElementById('spinner-text');
+            let timer1, timer2, timer3;
+
+            // Mulai timer untuk pesan "Data sedang diproses..." setelah 0 detik
+            timer1 = setTimeout(() => {
+                spinnerText.textContent = "Data sedang diproses...";
+            }, 0);
+
+            // Mulai timer untuk pesan "Jaringan Anda kurang Oke..." setelah 10 detik
+            timer2 = setTimeout(() => {
+                spinnerText.textContent = "Jaringan Anda kurang Oke...";
+            }, 10000); // 10 detik
+
+            // Mulai timer untuk pesan "Coba matikan jaringan data / wifi..." setelah 1 menit
+            timer3 = setTimeout(() => {
+                spinnerText.textContent = "Coba matikan jaringan data / wifi anda, lalu hubungkan kembali...";
+            }, 60000); // 60 detik (1 menit)
+
+            // Lakukan permintaan ke URL Google Apps Script (ganti dengan URL endpoint Anda)
+            fetch('https://script.google.com/macros/s/AKfycbwJnhE46t-cEe7F33ksQWh0CD9q-dGrTSI6abrwxMei7mYnG6F82VbhvLSYNf3jiGc9eQ/exec')
+                .then(response => response.json())
+                .then(data => {
+                    // Data berhasil diterima
+                    clearTimeout(timer1);
+                    clearTimeout(timer2);
+                    clearTimeout(timer3);
+
+                    // Ganti pesan dan sembunyikan spinner setelah data selesai diproses
+                    spinnerText.textContent = "Data berhasil dimuat";
+
+                    // Tampilkan konten halaman
+                    document.getElementById('content').style.display = 'flex';
+
+                    // Menampilkan data di dalam elemen
+                    const nameElement = document.getElementById('name');
+                    const ageElement = document.getElementById('age');
+
+                    // Ambil data pertama (atau bisa disesuaikan jika ada banyak data)
+                    const dataItem = data[0];
+
+                    // Isi elemen dengan data yang diterima
+                    nameElement.textContent = dataItem.name;
+                    ageElement.textContent = `ULANG TAHUN ${dataItem.age} tahun`;
+
+                    // Hapus spinner setelah animasi selesai
+                    setTimeout(() => {
+                        const spinnerOverlay = document.getElementById('spinner-overlay');
+                        if (spinnerOverlay) {
+                            spinnerOverlay.style.opacity = '0';
+                            setTimeout(() => spinnerOverlay.remove(), 500); // Hapus spinner setelah animasi selesai
+                        }
+                    }, 500); // Menghapus spinner setelah animasi selesai
+                })
+                .catch(error => {
+                    // Menangani kesalahan jika permintaan gagal
+                    clearTimeout(timer1);
+                    clearTimeout(timer2);
+                    clearTimeout(timer3);
+                    spinnerText.textContent = "Gagal mengambil data. Coba lagi.";
+                });
+        }
+
+    // Mengecek apakah nama tamu sudah disimpan di LocalStorage
+    const savedRecipientName = localStorage.getItem('kepada');
+    
+    // Jika ada, tampilkan nama di elemen h2
+    if (savedRecipientName) {
+      document.getElementById('recipient-name').textContent = savedRecipientName;
+    }
+    
+    // Handle URL parameters untuk nama penerima
+    const urlParams = new URLSearchParams(window.location.search);
+    const recipientName = urlParams.get('kepada');
+    if (recipientName) {
+      // Simpan nama penerima ke LocalStorage
+      localStorage.setItem('kepada', recipientName.replace(/\+/g, ' '));
+      // Perbarui tampilan nama di h2
+      document.getElementById('recipient-name').textContent = recipientName.replace(/\+/g, ' ');
+    }
+    
+    function bukaUndangan() {
+        // Menyimpan bahwa tombol sudah diklik menggunakan LocalStorage
+        localStorage.setItem('clickedToFullscreen', 'true');
+        window.location.href = 'asset/home.html';
+    }
+
+    </script>
+    
+</body>
+</html>

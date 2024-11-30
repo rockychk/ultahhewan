@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Gambar</title>
+    
+    <!-- Menambahkan Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Titan+One|Sour Gummy|Sigmar|Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Spinner Overlay -->
+    <div id="spinner-overlay">
+        <div class="spinner">
+            <img src="https://media.tenor.com/ik-bVGNIAXEAAAAj/spiderman-spider-man.gif" alt="Loading..." class="spinner-gif">
+            <span id="spinner-text">Halaman sedang dimuat...</span>
+        </div>
+    </div>
+
+    <!-- KONTAINER 1 -->
+    <div class="container" id="container-1">
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+    
+        <div class="texthome">
+            <p>HAPPY</p>
+            <P style="color: whitesmoke;">BIRTHDAY</P>
+            <h3 style="margin-top: 80px;">YUK DATANG DI ACARA</h3>
+            <h1 id="name"></h1>
+            <h3 id="age"></h3>
+            <h5>mengundang</h5>
+
+            <div class="tombolcover">
+                <h2 id="recipient-name"></h2>
+            </div>
+
+        </div>
+    
+        <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+    </div>
+
+    <!-- KONTAINER 2 -->
+    <div class="container" id="container-2" >
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+        
+        <div class="texthome2">
+            <h2>SELAMAT DATANG DI</h2>
+            <h1 id="event-age"></h1>
+            <h3 id="event-name"></h3>
+        </div>
+    
+    <!-- WAKTU DAN TANGGAL -->
+
+    <div class="date-container">
+      <div class="date-number" id="event-date"></div>
+      <div class="date-details">
+        <div class="day" id="event-day"></div>
+        <div class="month-year" id="event-month-year"></div>
+      </div>
+      <div class="separator"></div>
+      <div class="date-details">
+          <div class="time" id="event-time">20.00 WIB</div>
+          <div class="selesai">s.d SELESAI</div>
+      </div>
+    </div>
+
+        <!-- LOKASI ACARA -->
+        <div class="texthome2">
+            <h4>LOKASI ACARA</h4>
+            <h5 id="event-location"></h5>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div id="countdown" class="countdown">
+            <div class="time-box">
+                <div id="days" class="time-value">0</div>
+                <div class="time-label">Hari</div>
+            </div>
+            <div class="time-box">
+                <div id="hours" class="time-value">0</div>
+                <div class="time-label">Jam</div>
+            </div>
+            <div class="time-box">
+                <div id="minutes" class="time-value">0</div>
+                <div class="time-label">Menit</div>
+            </div>
+            <div class="time-box">
+                <div id="seconds" class="time-value">0</div>
+                <div class="time-label">Detik</div>
+            </div>
+        </div>
+    
+        <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+    </div>
+
+
+    <!-- KONTAINER 3 -->
+    <div class="container" id="container-3">
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+        
+        <div class="menu3" style="margin-top:-20vh">
+            <h1>Lokasi Acara</h1>
+            <iframe class="menu3-map" id="event-iframe" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h5>Desa Kramat, Kec. Tapa <br/>Kompleks Lapangan IPPOT Tapa</h5>      
+
+            <a id="event-map" href="#" target="_blank">
+                <div class="tombolcover">
+                    <button class="tombolbuka">Petunjuk Lokasi</button>
+                </div>
+            </a>
+
+        </div>
+    
+        <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+
+
+    </div>
+
+    <!-- KONTAINER 4 -->
+    <div class="container" id="container-4">
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+
+        <div class="menu4" style="margin-top:-20vh">
+            <h1>Ucapan</h1>
+            <h5>Berikan doa dan ucapan untuk Anak kami</h5>      
+            <div class="ucapan-container" id="ucapan"></div>
+
+            <button class="tombolbuka" id="btnBuatUcapan">Buat Ucapan</button>
+        
+            <div class="form-popup" id="formPopup">
+                <center>
+                    <!-- Spinner Loading -->
+                    <div id="spinner" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; justify-content: center; align-items: center;">
+                        <img src="https://media.tenor.com/ik-bVGNIAXEAAAAj/spiderman-spider-man.gif" alt="Loading..." class="spinner-gif">
+                    </div>
+                </center>
+                <form id="formPernikahan">
+                  <button type="button" class="btn-close" id="btnClosePopup">&times;</button>
+                  <h2 class="form-title">Buat Ucapan</h2>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-select" id="kehadiran" required>
+                      <option value="Hadir">Hadir</option>
+                      <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" id="pesan" placeholder="Tulis pesan atau ucapan" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Kirim Ucapan</button>
+                </form>
+              </div>
+              
+
+        
+            <!-- Respon Message -->
+            <div id="respon"></div>
+          </div>
+    
+          <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+          <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+          <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+
+    </div>
+
+    <!-- KONTAINER 5 -->
+    <div class="container" id="container-5">
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+
+        <div class="menu4" style="margin-top:-20vh">
+          <h1>Kirim Kado</h1>
+          <h5>Terima kasih telah menambah semangat kegembiraan ulang tahun anak kami dengan kehadiran dan hadiah indah Anda</h5>    
+          <center>
+          <div class="gift-card">
+            <div class="gift-card-logo">
+              <img src="" id="event-giftlogo" alt="Bank Mandiri" style="width:70px;">
+            </div>
+            <h2 id="event-giftname"></p>
+            <h4 id="event-bankaccount"></h3>
+            <button class="btn btn btn-dark mt-3 btn-block" id="copy-button">Salin Nomor</button>
+          </div>
+          </center>
+        </div>
+    
+        <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+    </div>
+
+    <!-- KONTAINER 6 -->
+    <div class="container" id="container-6">
+        <img src="./img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="./img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="./img/tr.webp" alt="Gambar 3" class="image-3">
+
+        <div class="menu6">
+            <img src="https://www.ldoceonline.com/media/english/illustration/baby.jpg?version=1.2.75" class="rounded-photo">
+          <h2>Terima kasih atas kehadirannya di acara ulang tahun anak kami</h2>    
+        </div>
+    
+        <img src="./img/bm-1.webp" alt="Gambar 9" class="image-9">
+        <img src="./img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="./img/br.webp" alt="Gambar 8" class="image-8">
+    </div>
+
+        <!-- Tombol Navigasi -->
+        <div class="button-container">
+            <button onclick="showContainer(1)" aria-label="Home">
+                <img src="icon/house-fill.svg" alt="House Icon" class="icon">
+            </button>
+            <button onclick="showContainer(2)" aria-label="Calendar">
+                <img src="icon/calendar-week-fill.svg" alt="Calendar Icon" class="icon">
+            </button>
+            <button onclick="showContainer(3)" aria-label="Location">
+                <img src="icon/geo-alt-fill.svg" alt="Location Icon" class="icon">
+            </button>
+            <button onclick="showContainer(4)" aria-label="Chat">
+                <img src="icon/chat-dots-fill.svg" alt="Chat Icon" class="icon">
+            </button>
+            <button onclick="showContainer(5)" aria-label="Gift">
+                <img src="icon/gift-fill.svg" alt="Gift Icon" class="icon">
+            </button>
+            <button onclick="showContainer(6)" aria-label="Chat Square">
+                <img src="icon/chat-square-quote-fill.svg" alt="Chat Square Icon" class="icon">
+            </button>
+        </div>
+        
+
+        <!-- Kontrol Audio (Play/Pause) -->
+        <div class="audio-controls">
+            <button id="playPauseBtn" onclick="togglePlayPause()">
+                <i class="bi bi-play-circle" id="playPauseIcon"></i>
+            </button>
+        </div>
+
+        <!-- Audio -->
+        <audio id="backgroundMusic" loop>
+            <source src="/asset/music/backsound.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+    <script src="/asset/js/script.js"></script>
+</body>
+</html>
