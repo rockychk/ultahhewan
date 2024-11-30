@@ -82,7 +82,7 @@ if (savedRecipientName) {
 
 // Cek apakah halaman di-refresh
 if (performance.navigation.type == 1) {
-    window.location.href = '/index.html';
+    window.location.href = './index.html';
 }
 
 // Fungsi untuk menampilkan kontainer yang dipilih

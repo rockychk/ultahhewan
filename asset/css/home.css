@@ -13,16 +13,16 @@
     
 @font-face {
     font-family: 'Sigmar';
-    src: url('/asset/font/Sigmar/Sigmar.ttf') format('truetype'),
-         url('/asset/font/Sigmar/Sigmar.woff') format('woff');
+    src: url('asset/font/Sigmar/Sigmar.ttf') format('truetype'),
+         url('asset/font/Sigmar/Sigmar.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Sour Gummy';
-    src: url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
-         url('/asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
+    src: url('asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+         url('asset/font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -47,7 +47,7 @@ html, body {
 /* Kontainer utama */
 .container {
     position: relative;
-    background-image: url("/asset/img/background.jpg");
+    background-image: url('../img/background.jpg');
     background-size: cover;
     background-position: center; /* Menempatkan gambar di tengah */
     background-repeat: no-repeat; /* Menghindari pengulangan gambar */
@@ -211,7 +211,8 @@ html, body {
 
 .texthome p {
     font-size: 12vw;
-    font-family: 'Bebas Neue Bold';
+    font-family: 'Bebas Neue';
+    font-weight: bold;
     color: var(--txt-primary);
     line-height: 0.8;
     animation: moveUpDown 1s infinite ease-in-out;
@@ -253,7 +254,7 @@ html, body {
 .texthome h3 {
     font-size: 8vw;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     color: whitesmoke;
     animation: zoomIn 2s forwards; /* Menambahkan animasi zoom in */
 
@@ -262,7 +263,7 @@ html, body {
 .texthome h5 {
     font-size: 4vw;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     margin-top: 50px;
     color: whitesmoke;
 }
@@ -271,7 +272,6 @@ html, body {
 .texthome2 {
     position: relative;
     margin-top: 30%;
-    font-weight: normal;
     text-align: center;
     justify-content: center;
     z-index: 999;
@@ -280,7 +280,8 @@ html, body {
 
 .texthome2 h1 {
     font-size: 100px;
-    font-family: 'Bebas Neue Bold';
+    font-family: 'Bebas Neue';
+    font-weight: bold;
     text-align: center;
     color: whitesmoke;
     margin-top: -10px;
@@ -289,7 +290,8 @@ html, body {
 
 .texthome2 h2 {
     font-size: 35px;
-    font-family: 'Bebas Neue Bold';
+    font-family: 'Bebas Neue';
+    font-weight: bold;
     color: var(--txt-primary);
     text-align: center;
     animation: moveAtasBawah 2s forwards; /* Menambahkan animasi */
@@ -321,7 +323,8 @@ html, body {
 
 .texthome2 h3 {
     font-size: 25px;
-    font-family: 'Bebas Neue Bold';
+    font-family: 'Bebas Neue';
+    font-weight: bold;
     color: whitesmoke;
     text-align: center;
     animation: moveBawahAtas 2s forwards; /* Menambahkan animasi */
@@ -330,7 +333,8 @@ html, body {
 
 .texthome2 h4 {
     font-size: 30px;
-    font-family: 'Bebas Neue Bold';
+    font-family: 'Bebas Neue';
+    font-weight: bold;
     color: whitesmoke;
     text-align: center;
     margin-top: -25%;
@@ -341,6 +345,7 @@ html, body {
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Bebas Neue';
+    font-weight: bold;
     color: whitesmoke;
     text-align: center;
 }
